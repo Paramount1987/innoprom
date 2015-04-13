@@ -1,0 +1,146 @@
+.news-period
+  float: left
+
+.form-period
+  display: inline-block  
+  select
+    background-color: #fff 
+    @include box-shadow(inset 0 1px 1px rgba(0,0,0,.29))
+    border: 1px solid #ccc
+    width: 170px
+    padding: 6px 0 6px 8px
+    color: #7b7c81
+    margin-left: 20px
+
+
+ul.list-type-news
+  font-size: 0
+  margin-top: 25px
+  margin-bottom: 50px
+  display: table
+  width: 100%
+  li
+    display: table-cell
+    list-style: none
+    padding: 0
+    width: 50%
+    padding-right: 5%
+    //padding-bottom: 35px
+    margin: 0 0 35px 0
+    position: relative
+    vertical-align: top
+    &:before
+      content: ""
+      display: none
+    .title-link
+      color: #353535 
+      font: 16.5px/22px "geometriamedium"
+      margin: 30px 0 15px 0
+      display: block
+      &:hover
+        text-decoration: underline
+    .date
+      font: 11px/15px "proba_probold"
+      text-transform: uppercase
+      letter-spacing: 1px
+      color: #2fa9db
+    &:after
+      content: ""
+      display: block
+      position: absolute
+      bottom: 0
+      left: 0
+      width: 95%
+      border: 1px solid #f2f3f3  
+    .img-responsive
+      width: 245px  
+
+
+
+
+
+
+@media (max-width: 1280px)
+  ul.list-type-news
+    display: block
+    li
+      width: 100%
+      display: block
+      padding-right: 0
+      &:after
+        width: 100%
+      .img-responsive
+        float: left
+        margin-right: 30px
+        margin-bottom: 28px
+
+
+@media (max-width: 1023px)
+  ul.list-type-news
+    li
+      .img-responsive
+        float: none
+        margin-right: 0
+  .pagination-top
+    display: none        
+
+
+ul.list-type-news
+  .list-content
+    p
+      font-size: 15px
+      color: #595f71
+
+.list-footer
+  font: 12px/12px "proba_prolight"
+  @include clearfix()
+  .link-footer
+    text-decoration: underline
+    color: #595f71
+    display: inline-block
+    float: left
+    &:hover
+      text-decoration: none
+  .hash-wrap
+    float: right  
+    a
+      color: #3399cc 
+
+
+@media (min-width: 1280px)
+  .list-type-news li
+    position: relative
+    .list-footer
+      padding-right: 5%
+
+@media (max-width: $screen-xs-max)
+  .news-period
+    float: none
+    text-align: center
+    .form-period
+      display: block
+      text-align: center
+      margin-top: 5px
+  .list-content
+    p
+      display: none
+  .list-footer
+    .link-footer
+      float: none
+      margin: 10px 0
+    .hash-wrap 
+      float: none
+
+///////////////////////
+.news-inner
+  display: table
+  .list-footer
+    display: table-row
+    height: 100%
+    .inner
+      display: table-cell
+      vertical-align: bottom
+      padding-bottom: 0
+    &:after,
+    &:before
+      display: none  

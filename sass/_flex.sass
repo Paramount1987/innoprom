@@ -1,0 +1,378 @@
+.news-period
+  float: left
+
+.form-period
+  display: inline-block  
+  select
+    background-color: #fff 
+    @include box-shadow(inset 0 1px 1px rgba(0,0,0,.29))
+    border: 1px solid #ccc
+    width: 170px
+    padding: 6px 0 6px 8px
+    color: #7b7c81
+    margin-left: 20px
+
+
+.list-type-news
+  @include flexbox
+  @include justify-content(space-between) 
+  @include flex-wrap(wrap)
+  margin-top: 35px
+  li
+    width: 45%
+    display: inline-block
+    padding-left: 0 !important
+    padding-right: 0 !important
+    margin-bottom: 40px !important
+    border-bottom: 1px solid #ccc
+    &:before
+      display: none !important
+    .title-link
+      color: #353535 
+      font: 16.5px/22px "geometriamedium"
+      margin: 30px 0 15px 0
+      display: block
+      text-decoration: none
+      &:hover
+        text-decoration: underline  
+        color: #30a9db
+    .date
+      font: 11px/15px "proba_probold"
+      text-transform: uppercase
+      letter-spacing: 1px
+      color: #2fa9db   
+    .img-responsive
+      width: 245px
+
+
+.list-type-news
+  .list-content
+    p
+      font-size: 15px
+      color: #595f71  
+      margin-bottom: 15px 
+
+
+.list-footer
+  font: 12px/12px "proba_prolight"
+  .link-footer
+    text-decoration: underline
+    color: #595f71
+    display: inline-block
+    float: left
+    padding: 8px 0
+    position: relative
+    line-height: 14px
+    &:hover
+      text-decoration: none
+  .hash-wrap
+    float: right  
+    padding: 8px 0
+    a
+      color: #3399cc 
+      text-decoration: none
+
+
+.list-footer .link-footer .icon-popup:before
+  color: #53b8e1
+  font-size: 12px
+  display: inline-block
+  text-decoration: none
+  line-height: 14px
+  width: 14px
+  margin-right: 0
+
+.news-inner
+  .list-footer
+    position: absolute
+    bottom: 20px
+    width: 100%
+    .inner
+      @include clearfix()
+    &:after,
+    &:before
+      display: none  
+
+
+@media (max-width: 1100px)
+  .list-type-news
+    display: block
+    li
+      width: 100%
+      padding-bottom: 20px !important
+      .list-content
+        p
+          display: block
+      .img-responsive
+        display: inline-block
+        vertical-align: top
+        margin-right: 20px
+        margin-bottom: 20px
+        width: 245px
+        float: left   
+      .title-link
+        margin-top: 0  
+    .news-body
+      display: inline-block
+      vertical-align: top
+      width: calc(100% - 265px)       
+  .news-inner
+    .list-footer 
+      position: relative
+      bottom: 0 
+
+
+@media (max-width: 1023px)
+  .list-type-news
+    display: block
+    li
+      width: 100%
+      padding-bottom: 20px !important
+      .list-content
+        p
+          display: none
+  .news-inner
+    .list-footer 
+      position: relative
+      bottom: 0         
+
+@media (max-width: 1023px)
+  .news-period
+    float: none
+    text-align: center
+    .form-period
+      display: block
+      text-align: center
+      margin-top: 5px
+
+
+@media (max-width: 1023px)
+  ul.list-type-news
+    li
+      .img-responsive
+        float: none
+        display: block
+        margin-right: 0
+      .news-body
+        display: block
+        width: 100%  
+  .pagination-top
+    display: none   
+
+//////////////////////////////////////////
+
+.participant-list
+  @include flexbox
+  @include justify-content(space-between) 
+  @include flex-wrap(wrap)
+  li
+    width: 49%
+    padding: 20px
+    margin-bottom: 20px
+    border: 1px solid #f1f1f1
+    .img-wrap,
+    .favorite
+      width: 110px
+      display: inline-block
+      vertical-align: top
+      text-decoration: none
+    .body-list,
+    .stand
+      display: inline-block 
+      padding-left: 20px
+      width: calc(100% - 115px) 
+      vertical-align: top
+    .img-wrap
+      height: 111px
+      background: #fff
+      position: relative
+      overflow: hidden
+      img 
+        position: absolute
+        top: 50%
+        left: 50%
+        @include translate(-50%,-50%)
+        image-rendering: -webkit-optimize-contrast
+
+
+.participant-list li:hover
+  background: #f1f1f1
+  border: 1px solid #30a8e0 
+  .title-participant
+    color: #30a8e0
+
+.participant-list
+  .part-top p
+    color: #595f71
+    font-size: 15px
+  .title-participant
+    font: 16.5px/20px "geometriamedium"
+    margin: 0 0 10px 0
+    display: block
+    text-transform: uppercase
+  a.title-participant  
+    text-decoration: none
+    color: #000
+    &:hover
+      text-decoration: underline
+  p
+    margin: 0  
+  .part-bottom
+    margin-top: 15px  
+  .favorite
+    color: #656668
+    font: 11px/30px "proba_prolight"  
+    font-style: italic
+  .favorite.selected
+    color: #30a8e0  
+  .name-exhibition
+    font-size: 12px
+    color: #000  
+  .number-stand
+    font: 12px/28px "proba_prolight"
+    span
+      font-family: "proba_probold"
+      color: #2fa9db
+      text-transform: uppercase 
+      display: inline-block
+      padding-left: 8px
+      letter-spacing: 0.5px
+
+.participant-list > li
+  @include flexbox
+  @include flex-flow(column wrap)
+  @include justify-content(space-between)
+
+
+@media (max-width: $screen-sm-max)
+  .participant-list li
+    width: 100%
+
+@media (max-width: $screen-xs-max)
+  .participant-list li
+    .img-wrap,
+    .body-list,
+    .stand
+      width: 100%
+      display: block
+    .body-list,
+    .stand
+      padding-left: 0  
+    .favorite
+      display: inline-block  
+    .img-wrap 
+      margin-bottom: 20px
+
+
+/////////////////////////////////////////////////////
+.filter
+  padding-bottom: 35px
+  margin-bottom: 35px
+  border-bottom: 1px solid #f2f2f2
+  .present-wrap
+    background: #f2f2f2
+    width: 260px
+    float: right
+    padding: 35px
+    .present-link
+      color: #393a3f
+      font: 17px/20px "proba_prolight"
+      padding: 15px 0 5px 0
+      position: relative
+      padding-left: 75px
+      display: block
+      margin-bottom: 10px
+      i
+        position: absolute
+        display: block
+        top: 50%
+        left: 10px
+        @include translate(0,-50%)  
+  .search-wrap
+    width: 525px
+    float: left
+    position: relative
+    margin-bottom: 20px
+    .fied-search
+      width: 100%
+      height: 35px
+      padding-right: 40px
+      padding-left: 15px
+      font: 12px/20px "proba_prolight"
+      border: 1px solid #ccc
+      @include placeholder(#656668)
+      @include box-shadow(inset 0 1px 1px rgba(0,0,0,.29))  
+    .icon-search
+      position: absolute
+      top: 0
+      right: -5px  
+  .select-wrap
+    display: inline-block 
+    width: 65% 
+  .select-item
+    width: 250px
+    margin-right: 20px
+    margin-bottom: 20px
+    display: inline-block
+    h6
+      font: 14px/20px "proba_probold"
+      margin: 12px 0
+    select
+      width: 100%  
+      height: 35px
+      line-height: 35px
+      padding-left: 8px
+      border: 1px solid #ccc
+      outline: 0
+      @include box-shadow(inset 0 1px 1px rgba(0,0,0,.29))  
+      word-wrap: normal
+
+.btn-b
+  background: #30a8e0   
+  width: 170px   
+  color: #fff
+  text-transform: uppercase
+  font: 13px/35px "proba_prosemibold"
+  text-align: center
+  border: 0
+  outline: 0
+  letter-spacing: 0.5px
+  @include transition(all linear .2s)
+  &:hover
+    background: darken(#30a8e0,15%)
+
+
+@media (max-width: $screen-sm-max)  
+  .filter
+    .search-wrap,
+    .select-wrap
+      width: 440px
+
+@media (max-width: $screen-xs-max)  
+  .filter
+    margin-left: -30px
+    margin-right: -30px
+    padding-left: 0
+    padding-right: 0
+    .search-wrap,
+    .select-wrap
+      width: 100%
+      float: none
+      padding-left: 30px
+      padding-right: 30px
+    .select-item
+      display: block
+      width: 100%  
+    .btn-b
+      margin: auto
+      display: block 
+    .present-wrap
+      width: 100%
+      padding: 20px
+      float: none
+      .present-link
+        padding-left: 65px
+        font: 16px/20px "proba_prolight"
+    .search-wrap .icon-search
+      right: 20px  
+////////////////////////////////////////////////////////

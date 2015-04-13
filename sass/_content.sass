@@ -1,0 +1,1582 @@
+.content
+  @include rem2px(padding-bottom,9)
+
+.content-body a
+  text-decoration: underline
+  &:hover
+    text-decoration: none  
+
+.content-inner a
+  text-decoration: underline
+  &:hover
+    text-decoration: none 
+
+.content-inner h5 a
+  color: #333
+  text-decoration: none
+  &:hover
+    text-decoration: underline
+    color: #30a9db
+
+.content-empty
+  @include rem2px(padding-bottom,1)
+
+@media (max-width: $screen-xs-max)
+  .content-inner
+    padding: 0 15px
+  .content
+    padding-bottom: 30px  
+
+.content-body
+  @extend .clearfix
+
+.right-side-block
+  float: right
+  width: 330px
+  margin-bottom: 40px
+  .right-feedback
+    padding: 40px 30px 30px 30px
+    background: #f7f7f7
+    position: relative
+    margin-top: 20px
+    .wrap-outlink
+      padding-left: 10px
+
+.present-link
+  color: #393a3f
+  font: 17px/20px "proba_prolight"
+  padding: 15px 0 5px 0
+  position: relative
+  padding-left: 75px
+  display: block
+  margin-bottom: 30px
+  i
+    position: absolute
+    display: block
+    top: 50%
+    left: 10px
+    @include translate(0,-50%)
+
+.right-side-block
+  h5
+    font: 15px/22px "proba_prosemibold"
+    text-transform: uppercase 
+    letter-spacing: 0.5px
+    color: #000
+    margin-bottom: 20px
+    margin-top: 15px
+  .location
+    border-top: 1px solid #fff
+    border-bottom: 1px solid #fff
+    margin: 10px 0 25px 0
+    padding: 15px 0 20px 10px
+    position: relative
+    a
+      color: #2fa9db
+      font-family: "proba_probold"  
+      display: block
+  .location-alone
+    padding: 0 0 20px 55px  
+    border: 0
+    margin: 0
+    &:before
+      content: ""
+      display: block
+      position: absolute
+      top: 4px
+      left: 0
+      width: 36px
+      height: 44px
+      background: url("../i/flag.png") no-repeat  
+
+
+.right-side-block-less
+  width: 260px
+
+.right-feedback
+  &:before,
+  &:after
+    content: ""
+    display: block
+    position: absolute
+    z-index: 1
+    top: -20px
+    left: 0
+    width: 100%
+    height: 4px
+    background: #30a9db
+    background-clip: content-box
+  &:after
+    z-index: 2
+    width: 45%
+    background: #e50069  
+    background-clip: content-box
+
+
+@media (min-width: $screen-md-min)
+  .content-body
+    float: left
+    width: calc(100% - 330px)
+    padding-right: 5%
+
+@media (min-width: $screen-lg-min)
+  .content-header
+    width: calc(100% - 330px)
+    padding-right: 5%
+    float: left
+  .content-body
+    width: calc(100% - 330px) 
+    padding-right: 5% 
+
+@media (max-width: $screen-sm-max)
+  .content-body
+    float: left
+    width: calc(100% - 330px)
+    padding-right: 5%
+  .right-side-block
+    padding-top: 20px
+
+/////////////////////////////////////content-less
+@media (min-width: $screen-md-min)
+  .content-less .content-body
+    width: calc(100% - 260px)
+  .content-less .right-side-block
+    padding-top: 0
+
+@media (min-width: $screen-lg-min)
+  .content-less .content-header
+    width: calc(100% - 260px)
+  .content-less .content-body
+    width: calc(100% - 260px) 
+
+
+
+@media (max-width: $screen-sm-max)
+  .content-less .content-body
+    width: calc(100% - 260px)
+  .right-side-block-less
+    padding-top: 0  
+
+
+/////////////////////////////////////content-less
+@media (max-width: $screen-xs-max)
+  .content-header,
+  .content-body,
+  .right-side-block
+    width: 100%
+    float: none
+  .content-body
+    padding: 0 15px 
+  .content-header
+    margin-left: -15px
+    margin-right: -15px   
+  .right-side-block
+    margin-bottom: 0 
+
+@media (max-width: $screen-xs-max)
+  .content-less .content-body
+    width: 100%
+
+
+
+.content h1
+  font: 30px/42px "proba_promedium"
+  text-transform: uppercase
+  margin: 10px 0 20px 0
+  padding-right: 320px
+
+@media (max-width: $screen-sm-max)
+  .content h1
+    padding-right: 0
+
+@media (max-width: $screen-xs-max)
+  .content h1
+    font: 22px/30px "proba_promedium"
+    text-align: center
+    margin: 35px 0 32px 15px
+    padding-right: 0
+
+@media (max-width: $screen-xs-max)
+  .content-less h1
+    margin-top: 20px
+    margin-bottom: 15px
+
+@media (min-width: $screen-lg-min)
+  .content h1
+    margin-top: 10px
+
+.content-header
+  margin-bottom: 45px
+
+.content-header .img-responsive
+  width: 100%
+  min-width: 768px
+  margin: 10px 0
+
+.content-header .img-title 
+  margin: 40px 0 0 0
+  font: 16.5px/20px "geometriamedium"
+  color: #353535
+  display: table
+  li
+    display: table-cell
+    vertical-align: middle
+  li.first
+    width: 20%  
+    padding-right: 20px
+    margin-bottom: 40px
+    font-size: 14px
+    letter-spacing: 0
+    font-family: "proba_promedium"
+    text-align: center
+    img
+      max-width: 100%
+    a
+      display: block
+      color: #e50069
+      font-family: "proba_probold"
+      &:hover
+        text-decoration: underline
+
+.content-header .img-title p span
+  font-family: "proba_prolight"
+
+.content-header .img-title p a
+  font-family: "proba_prolight"
+  color: #30a7df
+  font-size: 17px
+
+@media (max-width: $screen-xs-max)
+  .content-header .img-title 
+    display: block
+    padding-right: 0
+    padding-left: 30px
+    li.first
+      text-align: center
+      width: 100%
+    li
+      display: block
+      width: 100%
+
+.content-body
+  font-size: 15px
+  p
+    margin-top: 0
+  h4
+    font: 19px/24px "proba_prosemibold"
+    text-transform: uppercase
+    letter-spacing: 1px
+  h5
+    font: 16.5px/23px "geometriamedium"
+    position: relative
+  h6
+    font: 16.5px/23px "geometriamedium"
+    color: #353535
+    margin-top: 0
+
+dl
+  margin-bottom: 20px
+
+dl dt
+  font: 16.5px/23px "geometriamedium"
+  margin-bottom: 20px
+
+dl dd
+  font: 17px/20px "proba_prosemibold"
+  color: #656569
+
+@media (max-width: $screen-xs-max)
+  .content-body
+    h4
+      font: 16px/22px "proba_prosemibold"
+//////////////////////////////////////////
+.agent-wrap
+  border-top: 1px solid #fff
+
+.agent-item
+  color: #21232d
+  font-size: 14px
+  margin-bottom: 25px
+  padding-left: 10px
+  @extend .clearfix
+  .photo-agent
+    width: 100px
+    float: left
+    margin-right: 15px
+  .agent-data
+    p
+      margin-bottom: 5px
+    h5
+      font: 17px/22px "proba_prosemibold"
+      margin: 5px 0
+      text-transform: none
+      letter-spacing: 0
+    a
+      color: #393a3f
+      font: 13px/18px 'Ubuntu'
+      font-weight: 300  
+      display: block
+
+
+.mail-link
+  text-decoration: underline  
+  color: #393a3f
+  font: 13px/18px 'Ubuntu'
+  font-weight: 300  
+  display: block
+  &:hover
+    text-decoration: none
+    color: #393a3f
+
+.phone-link
+  font: 13px/18px "Ubuntu"
+  margin-bottom: 5px
+  display: block
+  color: #393a3f
+
+.side-partner
+  border-top: 1px solid #fff
+  padding-top: 10px
+  padding-left: 10px
+  li
+    margin-bottom: 50px
+  li.last
+    margin-bottom: 0  
+///////////////////////////////////////
+.content-body .img-list
+  margin-top: 30px
+  @extend .clearfix
+  font-size: 0
+  li
+    display: table
+    float: left
+    margin-bottom: 40px
+    padding-left: 0
+    &:before
+      display: none
+  .img-wrap
+    width: 30%
+    padding-right: 40px
+    display: table-cell
+  .text  
+    display: table-cell
+    vertical-align: middle
+    p
+      margin: 0
+      font: 16px/20px "proba_prolight"
+
+
+@media (max-width: 1280px)
+  .content-body .img-list
+    margin-left: 0
+    padding-top: 0
+    li
+      display: block
+      margin-left: 0
+      width: 100%
+      .img-wrap,
+      .text
+        display: block
+        width: 100%
+      .text  
+        padding: 20px 20px 0 0
+      .img-wrap 
+        padding-right: 0
+        width: 340px
+        img
+          width: 100%
+
+@media (max-width: $screen-xs-max)
+  .content-body .img-list
+    margin-left: 0
+    padding-top: 0
+    li
+      display: block
+      margin-left: 0
+      width: 100%
+      .img-wrap,
+      .text
+        display: block
+        width: 100%
+      .img-wrap 
+        padding-right: 0
+        width: 243px
+        img
+          width: 100%
+          
+///////////////////////////////////////////////
+.partners
+  @include rem2px(padding-bottom, 5)
+  ul
+    font-size: 0
+  h4
+    font: 21px/22px "proba_promedium"
+    text-transform: uppercase
+  li
+    display: inline-block
+    vertical-align: top
+  li.official-partners,
+  li.company-members
+    display: block
+    a
+      display: inline-block
+      text-align: center
+      width: 155px
+      margin: 0 2%
+      margin-bottom: 30px 
+      img
+        max-width: 100%
+  li.general-partner
+    width: 50%
+  li.info-partner
+    width: 50%        
+
+/////////////////////////////////
+.list-grid
+  font-size: 0
+  margin-left: -4%
+  li
+    display: inline-block
+    margin: 0 0 0 4%
+    width: 21%
+    @include rem2px(margin-bottom, 5)
+    vertical-align: top
+    .wrap-img
+      overflow: hidden
+      margin-bottom: 15px
+    img
+      width: 100%
+      max-height: 226px
+    span
+      display: block
+      font-size: 13px
+      color: #595f71
+    a
+      color: #000
+      display: block
+      margin: 0 0 15px 0
+      font: 19px/25px "geometriamedium"
+      text-decoration: none
+      &:hover
+        text-decoration: underline  
+        color: #30a9db   
+
+
+@media (max-width: $screen-xs-max)
+  .list-grid
+    margin-left: 0
+    width: 100%
+    li
+      display: block
+      width: 100%
+      margin: 0 0 35px 0
+      img
+        max-width: 100%
+        width: auto
+///////////////////////////////////////////////
+.member-org-wrap
+  h5
+    font: 19px/25px 'geometriamedium'
+    margin: 20px 0 50px 0
+
+
+.line-block
+  position: relative
+  padding-top: 1px
+  &:after,
+  &:before
+    content: ""
+    display: block
+    position: absolute
+    z-index: 1
+    top: 0
+    left: 0
+    width: 100%
+    height: 4px
+    background: #30a9db
+    background-clip: content-box
+  &:after
+    z-index: 1
+    width: 160px
+    background: #e50069
+    background-clip: content-box  
+
+
+.member-org
+  font-size: 0
+  margin-left: -17%
+  li 
+    display: inline-block
+    vertical-align: top
+    margin: 0 0 40px 15%
+    width: 35%
+    p
+      font: 15px/20px "proba_prolight"
+    .post
+      margin-bottom: 25px  
+    .name
+      font: 19px/25px 'geometriamedium'
+      color: #353535
+      text-transform: uppercase
+      display: block
+    .img-wrap
+      float: left
+      width: 35%   
+      margin-right: 30px  
+      img
+        width: 100%
+
+.boss-wrap
+  font-size: 0
+  margin-left: -17%
+  @include rem2px(margin-bottom,4)
+
+.member-org-wrap.workers
+  @include rem2px(margin-bottom,5)
+
+.member-org-wrap.boss
+  width: 35%
+  display: inline-block
+  margin-left: 15%
+  vertical-align: top
+  .member-org
+    margin: 0
+  li
+    width: 100%
+    margin: 0 0 40px 0
+  h5
+    height: 50px
+    margin-bottom: 30px  
+
+@media (max-width: $screen-sm-max)
+  .boss-wrap
+    margin-left: -5%
+  .member-org-wrap.boss
+    width: 45%
+    margin-left: 5% 
+  .member-org
+    margin-left: -5%
+    li
+      margin: 0 0 40px 5%
+      width: 45%
+
+@media (max-width: $screen-xs-max) 
+  .member-org
+    margin-left: 0
+    li
+      width: 100%
+      margin: 0
+      padding-bottom: 35px
+      .name
+        margin-top: 20px
+      .img-wrap
+        float: none
+        width: 200px
+    li.hidden-li
+      height: 0
+      overflow: hidden
+      padding-bottom: 0   
+  .boss-wrap
+    margin: 0      
+  .member-org-wrap.boss
+    width: 100%
+    margin: 0  
+    .member-org li
+      padding-bottom: 0  
+    h5
+      font: 17px/22px 'geometriamedium'  
+  .member-org-wrap.workers
+    h5 
+      font: 17px/22px 'geometriamedium'
+      margin-bottom: 30px 
+    .member-org 
+      @include transition(height linear .3s)   
+    .member-org.all
+      height: auto  
+
+
+.show-all
+  text-align: center
+  .link-show
+    color: #2fa9db
+    font-size: 11px
+    letter-spacing: 0.5px
+    font-family: "proba_probold"
+    text-transform: uppercase   
+    position: relative
+    display: inline-block
+    padding-top: 65px
+    &:before
+      content: ""
+      width: 44px
+      height: 44px
+      top: 0
+      left: 50%
+      margin-left: -22px
+      position: absolute
+      display: inline-block
+      background: url("../i/update.png") no-repeat    
+//////////////////////////////////
+.content-body ul
+  li
+    position: relative
+    padding-left: 30px
+    margin-bottom: 8px
+    &:before
+      content: ""
+      position: absolute
+      display: block
+      width: 0
+      height: 0
+      border: 2px solid #30a9db
+      border-radius: 10px
+      top: 8px
+      left: 9px
+    b
+      font: 17px/20px "proba_prosemibold"  
+      color: #656569
+
+
+//////////////////////
+.img-header
+  height: 260px
+  position: relative
+  overflow: hidden
+  img
+    position: absolute
+    top: 50%
+    left: 50%
+    @include translate(-50%,-50%)
+
+@media (max-width: $screen-xs-max)
+  .img-header
+    margin-right: -30px
+
+
+///////////////////////////////////////////////////////////////////  
+.right-side-block .subscribe
+  h4
+    font: 15px/20px "proba_probold"
+    margin: 20px 0 15px 0
+  p
+    font: 12px/19px "proba_prolight"  
+  .inner
+    min-height: 285px
+    padding: 25px
+  &:before,
+  &:after
+    padding: 0
+
+
+.right-hash-block
+  background: #f2f2f0 url("../i/images/industry-bg.jpg")
+  margin-bottom: 40px
+  padding: 25px
+  h4
+    font: 15px/20px "proba_probold"
+    letter-spacing: 1px
+    text-transform: uppercase
+    margin: 20px 0 15px 0
+  .list-tag
+    a
+      color: #21232d
+      line-height: 22px
+      &:hover
+        text-decoration: underline
+        color: #30a9db
+  .link-tag
+    text-transform: uppercase
+    color: #2fa9db  
+    font: 11px/12px "proba_probold"
+    letter-spacing: 1px
+
+
+@media (max-width: $screen-xs-max)
+  .right-hash-block
+    margin-bottom: 0
+    .list-tag
+      -moz-column-count: 2
+      -moz-column-gap: 30px
+      -webkit-column-count: 2
+      -webkit-column-gap: 30px
+      column-count: 2
+      column-gap: 30px
+
+@media (max-width: $screen-xs-max)
+  .right-side-block-less .subscribe
+    background: #fff
+    padding: 60px 30px  40px 30px !important
+    &:before,
+    &:after
+      content: ""
+      display: block
+      position: absolute
+      z-index: 1
+      top: 35px
+      left: 0
+      width: 100%
+      height: 4px
+      background: #30a9db
+      padding: 0 30px
+      background-clip: content-box
+    &:after
+      z-index: 2
+      width: 45%
+      background: #e50069
+      background-clip: content-box
+////////////////////////////////////////////////
+.list-archive
+  margin: -30px -50px 0 -50px
+  > li
+    padding: 45px 50px
+  .img-wrap
+    width: 340px
+    height: 240px
+    display: inline-block
+    overflow: hidden
+    vertical-align: top
+    margin-right: 5%
+  .archive-body
+    display: inline-block    
+    vertical-align: top
+    h4
+      font: 26px/26px "proba_promedium"
+      text-transform: uppercase
+      margin: 0 0 20px 0
+    a
+      font: 16.5px/15px "geometriamedium"
+      color: #353535
+      position: relative
+      display: inline-block
+      margin: 15px 0
+      padding-left: 70px
+      text-decoration: none
+      &:hover
+        text-decoration: underline
+        color: #30a9db
+      &:before
+        content: ""
+        display: block
+        position: absolute
+        top: 50%
+        left: 0
+        margin-top: -22px
+        width: 45px
+        height: 45px
+        background: url("../i/sprite-list-new.png") no-repeat top left  
+
+.list-archive .archive-body a.i-photo:before
+  background-position: 0 -87px
+
+.list-archive .archive-body a.i-doc:before
+  background-position: 0 -189px
+
+.list-archive .archive-body a.i-plan:before
+  background-position: 0 -296px
+
+.list-archive .archive-body a.i-flag:before
+  background-position: 0 -505px
+
+.list-archive .archive-body a.i-window:before
+  background-position: 0 -390px
+
+.list-archive .archive-body a.i-pen:before
+  background-position: 0 -620px
+
+.list-archive > li:nth-child(even)
+  background: #f7f7f7
+
+
+.list-archive .list-links li
+  padding: 9px 0
+
+.list-archive .list-links
+  -webkit-column-count: 2
+  -moz-column-count: 2
+  column-count: 2
+  -webkit-column-gap: 7em
+  -moz-column-gap: 7em
+  column-gap: 7em
+  li
+    width: 268px
+
+@media (max-width: $screen-sm-max)
+  .list-archive .img-wrap
+    margin-bottom: 25px
+
+@media (max-width: 1075px)
+  .list-archive .list-links  
+    -webkit-column-gap: 3em
+    -moz-column-gap: 3em
+    column-gap: 3em
+
+@media (max-width: $screen-xs-max)
+  .list-archive
+    margin-top: -45px
+    > li 
+      padding: 35 50px 
+    .img-wrap
+      display: block
+      width: 100%
+      height: 175px
+      position: relative
+      img
+        position: absolute
+        top: 50%
+        left: 50%
+        @include translate(-50%,-50%)
+    .list-links
+      -moz-column-count: 1
+      -webkit-column-count: 1
+      column-count: 1
+      li
+        width: auto
+          
+
+////////////////////////////////////////////////////
+.partner-block
+  background: #f7f7f7
+  padding: 40px 40px 30px 40px
+  color: #000
+  margin-bottom: 25px
+  p
+    margin-bottom: 0
+  h5
+    font: 15px/22px "proba_prosemibold"
+    text-transform: uppercase
+    letter-spacing: 0.5px
+    color: #000
+  img
+    max-width: 100%  
+
+.link-pink
+  color: #e50069  
+  font-family: "proba_probold"
+  &:hover
+    text-decoration: underline
+    color: #e50069  
+
+.side-block-links
+  background: #f7f7f7    
+  padding-top: 25px
+  background-clip: content-box
+  .inner
+    padding: 30px 40px
+    .present-link
+      display: block
+///////////////////////////////////////////////////
+.content-body .list-inline
+  li
+    padding-left: 0
+    font: 17px/22px "proba_proregular"
+    color: #656569
+    display: inline-block
+    vertical-align: top
+    @include rem2px(margin-bottom,9)
+    &:before
+      display: none
+    h6
+      margin: 0  
+    i
+      display: block
+      width: 255px
+      height: 140px
+      margin-bottom: 20px
+      background: url("../i/sprite-inline.png") no-repeat top left  
+
+.content-body .list-inline i.per
+  background-position: -274px 40px
+
+.content-body .list-inline i.lamp
+  width: 200px
+  background-position: -531px 23px
+
+.content-body .list-inline i.exhibit
+  background-position: -744px 34px
+  width: 240px
+
+.content-body .list-inline i.programm
+  background-position: -990px 32px
+
+.content-body .list-inline i.paper
+  background-position: -1247px 32px
+
+@media (min-width: $screen-md-min)
+  .content-body .list-inline
+    margin-left: -6%
+    li
+      width: 40%
+      margin-left: 6%
+
+@media (min-width: $screen-lg-min)
+  .content-body .list-inline
+    margin-left: -7%
+    li
+      width: 25%
+      margin-left: 7%
+
+@media (max-width: $screen-xs-max)
+  .content-body .list-inline li
+    margin-bottom: 40px
+/////////////////////////////////////////////////
+.list-double
+  font-size: 0
+  margin-left: -8%
+  margin-top: 30px
+  li
+    display: inline-block
+    vertical-align: top
+    margin-left: 8%
+    width: 42%
+    font: 14px/22px "geometriamedium"
+    margin-bottom: 40px
+    .img-wrap
+      height: 140px
+      position: relative
+      overflow: hidden
+      img
+        position: absolute
+        max-width: 100%
+        top: 50%
+        left: 0
+        @include translate(0,-50%)
+    .title-sponsor
+      font: 19px/25px "proba_prosemibold"
+      display: block
+      text-transform: uppercase
+      letter-spacing: 0.5px
+      margin: 40px 0 15px 0
+    a.title-sponsor
+      text-decoration: none
+      color: #000
+      &:hover
+        text-decoration: underline
+        color: #30a9db    
+    .link-more
+      color: #2fa9db 
+      font: 11px/15px "proba_probold"
+      letter-spacing: 0.5px
+      text-transform: uppercase
+      display: inline-block
+      margin-top: 20px
+
+@media (max-width: $screen-xs-max) 
+  .list-double
+    margin: 0
+    li
+      display: block
+      margin: 0 0 80px 0
+      width: 100%  
+      .img-wrap
+        height: auto
+        img
+          position: relative
+          top: 0
+          left: 0
+          @include translate(0,0)
+/////////////////////////////////////////////////
+.content-body .ul-double
+  @include rem2px(margin-left,-8)
+  > li
+    padding: 0
+    @include rem2px(margin-left,8)
+    display: inline-block
+    vertical-align: top
+    width: 300px
+    margin-bottom: 30px
+    &:before
+      display: none
+    ul
+      margin-top: 15px  
+///////////////////////////////////////////////////
+.list-service-application .wrap-round
+  border: 2px solid #61cdff
+  border-radius: 100%
+  width: 50%
+  padding: 6% 0 9% 0
+  margin: 0 auto 50px auto
+  @include transition(all linear .2s)
+
+.list-service-application
+  table-layout: fixed
+  li
+    width: 100%
+    vertical-align: top
+    text-align: center
+    padding-right: 3%
+    padding-left: 3%
+    .link
+      font: 19px/25px "proba_proregular"
+      @include font-size(1.9)
+      padding: 0
+      img
+        width: 100%
+      &:hover
+        .wrap-round
+          background: #e50069
+          border-color: #e50069
+
+
+
+
+
+
+
+
+.service-application
+  background: #30a8e0 url("../i/images/bg-blue-b.png") no-repeat center -30px
+  padding: 90px 0 80px 0
+
+@media (max-width: $screen-sm-max) 
+  .service-application
+    padding: 30px 0 0 0
+  .list-service-application
+    display: block
+    height: auto
+    li
+      display: table
+      text-align: left
+      height: 70px
+      padding: 0
+      margin-bottom: 15px
+      .link
+        padding-left: 100px
+        display: table-cell
+        vertical-align: middle
+        position: relative
+      .wrap-round
+        width: 70px
+        height: 70px
+        display: inline-block 
+        position: absolute  
+        margin: 0
+        left: 0
+        top: 0
+        padding: 8px 0 0 0 
+
+//////////////////////////////////////////////////
+.list-favorite-links
+  border-bottom: 1px solid #f2f2f2
+  margin: 20px 0 20px 0
+  li
+    display: inline-block
+    vertical-align: top
+    width: 250px
+    padding: 20px 0 50px 0
+    a
+      color: #595f71
+      font-size: 15px
+      position: relative
+      display: inline-block
+      padding-left: 80px
+      &:before
+        content: ""
+        position: absolute
+        left: 0
+        top: -21px
+        width: 65px
+        height: 65px
+        background: #97979d url("../i/sprite-favorite.png") no-repeat left top
+        background-position: 18px 20px
+        border-radius: 100%
+      &:hover
+        color: #2fa7df
+        text-decoration: underline
+        &:before
+          background: #2fa7df url("../i/sprite-favorite.png") no-repeat left top
+          background-position: 18px 20px
+    a.print:before
+      background-position: -51px 16px
+    a.print:hover:before  
+      background-position: -51px 16px
+            
+
+
+@media (max-width: $screen-xs-max) 
+  .list-favorite-links
+    margin: 0 0 20px 0
+    padding-bottom: 20px
+    li
+      padding: 20px 0 20px 0
+    li a
+      padding-left: 60px
+      &:before,
+      &:hover:before
+        top: -13px
+        width: 50px
+        height: 50px
+        background-position: 11px 14px
+    li a.print:hover:before,
+    li a.print:before   
+      background-position: -59px 9px 
+//////////////////////////////////////////////////
+.news-full
+  border-bottom: 1px solid #f2f2f2
+  @include rem2px(padding-bottom,4)
+  margin-bottom: 30px
+  .date
+    color: #30a9db
+    text-transform: uppercase
+    font: 11px/15px "proba_probold"
+    letter-spacing: 1px
+    display: block
+    margin-bottom: 20px
+
+.content-body .img-center-wrap
+  text-align: center
+  margin-bottom: 15px
+  img
+    display: inline-block  
+    max-width: 100%
+    height: auto
+
+.content-body .img-left-wrap
+  text-align: left
+  margin-bottom: 15px
+  img
+    display: inline-block  
+    max-width: 100%
+    height: auto
+
+.pluso-more
+  display: none !important
+
+.pluso-wrap
+  a
+    margin-left: 8px !important
+
+.share-block
+  display: inline-block
+  float: right  
+
+.link-back-news
+  display: inline-block
+  float: left
+  color: #e6006a
+  text-decoration: underline
+  line-height: 35px
+  &:hover
+    text-decoration: none
+
+.icon-tag,
+.icon-mail-b
+  display: block
+  width: 32px
+  height: 32px
+  background: url("../i/sprite-side.png") no-repeat
+  background-position: 0 -274px
+
+.icon-mail-b
+  background-position: 0 -360px
+  width: 40px
+
+@media (max-width: $screen-xs-max) 
+  .share-block
+    float: none
+    display: block
+  .link-back-news  
+    display: block
+    float: none
+////////////////////////////////////////////////////
+.content-body .command-org 
+  margin-left: -5%
+  > li
+    width: 45%
+    padding-left: 0
+    margin-left: 5%
+    margin-bottom: 40px
+    &:before
+      display: none 
+  .name
+    margin-bottom: 10px    
+
+.content-body .command-org  ul
+  li
+    display: block
+    font: 15px/20px "proba_proregular"
+    margin: 0 0 15px 0
+    padding: 0 0 0 30px
+    width: 100%
+
+.boss-wrap.command-wrap
+  margin-left: -5%
+  margin-bottom: 0
+
+
+.member-org-wrap.command-org.boss
+  width: 45%
+  margin-left: 5%
+  @include rem2px(margin-bottom,5)
+  li
+    width: 100%
+  .command-org > li
+    padding-left: 0 !important
+  h5
+    margin-bottom: 15px  
+
+@media (max-width: $screen-sm-max)
+  .boss-wrap.command-wrap
+    margin-left: 0
+  .member-org-wrap.command-org.boss
+    margin-left: 0
+    width: 100%  
+  .member-org-wrap.command-org.boss.boss h5
+    margin-bottom: 10px  
+  .content-body .command-org > li
+    width: 100%
+    margin-left: 0
+  .content-body .command-org
+    margin-left: 0 
+  .content-body .command-org > li
+    margin-bottom: 0     
+    padding-bottom: 35px
+  .member-org-wrap h5
+    margin-bottom: 10px  
+
+
+.member-org-wrap.speakers
+  @include rem2px(padding-top, 7) 
+///////////////////////////////////////
+.contact-info
+  margin-bottom: 40px
+  h5
+    font: 27px/30px "proba_prolight"
+    margin: 30px 0 10px 0
+    span
+      font-family: "proba_probold"      
+
+.contact-path
+  @include rem2px(margin-top, 6)
+  h4
+    padding-left: 50px
+    min-height: 40px
+    position: relative
+    &:before
+      content: ""
+      position: absolute
+      top: 0
+      left: 0
+      display: block
+      width: 40px
+      height: 40px
+      background: url("../i/sprite-contact.png") no-repeat top left
+  ol
+    padding-left: 20px
+    li
+      color: #30a9db
+      p
+        color: #656569
+        margin: 5px 0
+
+.contact-path h4.bus:before
+  background-position: -86px 0
+
+.contact-path h4.taxi:before
+  background-position: -168px 0
+
+#map
+  height: 500px
+  position: absolute
+  width: 100%
+  left: 0
+  top: 420px
+
+.tab-item-map
+  padding-top: 560px
+
+.content-contact
+  .right-side-block
+    padding-top: 650px
+
+
+@media (max-width: $screen-sm-max)
+  .contact-info h5 span
+    display: block
+
+@media (max-width: $screen-xs-max)
+  #map
+    height: 300px
+    top: 340px
+  .tab-item-map
+    padding-top: 360px  
+  .contact-info h5  
+    font: 20px/25px "proba_prolight"
+    span
+      display: block
+////////////////////////////////////////////////
+.list-justify
+  text-align: justify
+  li
+    display: inline-block
+    vertical-align: top
+  &:after
+    content: ""
+    display: inline-block
+    width: 100%  
+
+.summary
+  text-align: center
+  padding: 40px 0 60px 0
+  h3
+    font-size: 19px
+    font-family: "proba_prosemibold"
+
+.list-summary li
+  margin-bottom: 20px
+  text-align: left
+
+.list-summary
+  @include font-size(2.2)
+  margin-top: 50px
+  b
+    font-family: "geometriamedium"
+    @include font-size(4.5)
+    font-weight: normal
+  i
+    display: block
+    width: 110px
+    height: 105px
+    background: url("../i/sprite-summary.png") no-repeat
+  .icon-2
+    background-position: 0 -135px
+  .icon-3
+    background-position: 0 -271px
+  .icon-4
+    background-position: 0 -405px 
+
+@media (max-width: $screen-xs-max)
+  .list-summary 
+    li
+      display: block
+      width: 100%
+
+.wrap-present-link
+  display: inline-block
+  background: #f5f5f5
+  padding: 20px 30px 0  30px
+  max-width: 330px
+  text-align: left
+
+@media (max-width: $screen-xs-max)
+  .wrap-present-link
+    padding: 20px 15px 0 15px
+
+//////////////////////////////////////////////
+.theme
+  background: #f2f2f0 url("../i/images/industry-bg.jpg")
+  @include rem2px(padding-top,5)
+  @include rem2px(padding-bottom,8)
+  text-align: center
+  h3
+    font-size: 19px
+    font-family: "proba_prosemibold"
+
+.list-theme
+  font-size: 18px
+  font-family: "proba_prosemibold"
+  margin-top: 50px
+  li
+    text-align: center
+    max-width: 200px
+    margin-bottom: 20px
+    i
+      display: inline-block
+      width: 70px
+      height: 70px
+      background: url("../i/sprite-theme.png") no-repeat
+    span
+      display: block  
+
+.list-theme
+  .icon-1
+    width: 100px
+  .icon-2
+    background-position: 5px -105px
+  .icon-3
+    background-position: 5px -225px
+  .icon-4
+    background-position: 0 -325px
+  .icon-5
+    background-position: 0 -440px
+
+@media (max-width: $screen-xs-max)
+  .list-theme
+    li
+      display: block
+      width: 100%
+      max-width: 100%
+      padding: 0 35px
+
+.service-link
+  display: inline-block
+  width: 200px
+  margin: auto
+  padding-left: 80px
+  position: relative
+  color: #30a7df
+  text-transform: uppercase
+  font-family: "proba_probold" 
+  text-align: left
+
+
+.service-link .square
+  background: url("../i/service-sprite.png") no-repeat left top
+  display: block
+  position: absolute
+  width: 60px
+  height: 60px
+  margin-top: -30px
+  top: 50%
+  left: 0
+
+.industry-copy
+  text-align: center
+  @include rem2px(padding-bottom, 8)
+  h3
+    font-size: 19px
+    line-height: 30px
+    font-family: "proba_prosemibold"
+  p
+    font-size: 15px
+    line-height: 20px
+    font-family: "proba_prolight"  
+
+////////////////////////////////////////
+.statistics
+  @include rem2px(padding-top,6)
+  @include rem2px(padding-bottom,8)
+  text-align: center
+  .visitors,
+  .statistics-inner
+    display: inline-block
+    width: 48%
+    vertical-align: top
+    text-align: left
+    margin-bottom: 65px
+
+.statistics .visitors
+  font-family: "geometriamedium"
+  font-weight: normal
+  padding-left: 170px
+  position: relative
+  line-height: 70px
+  @include font-size(7)
+  span
+    @include font-size(3.5)
+    display: block
+    font-family: "proba_prolight"
+    line-height: 30px
+  .icon-visitors
+    position: absolute
+    display: block
+    width: 120px
+    height: 119px
+    top: 5px
+    left: 0 
+
+.statistics-inner
+  p
+    font-family: "geometriamedium"
+    font-size: 16.5px
+  .part  
+    display: inline-block
+    position: relative
+    padding-left: 80px
+    font-family: "geometriamedium"
+    font-weight: normal
+    @include font-size(4.7)
+    line-height: 35px 
+    margin-top: 20px
+    i
+      position: absolute
+      top: 0
+      left: 0
+      display: block
+      width: 90px
+      height: 65px
+      background: url("../i/sprite-statictics.png") no-repeat top left
+    .icon-map
+      background-position: 0 -152px
+    span
+      display: block
+      font-family: "proba_prolight"
+      @include font-size(2.2)  
+  .part-2
+    padding-left: 100px  
+    margin-left: 30px   
+
+@media (max-width: $screen-sm-max)
+  .statistics 
+    .visitors,
+    .statistics-inner
+      width: 100%
+      display: block
+
+@media (max-width: $screen-xs-max)
+  .statistics-inner
+    .part
+      padding-left: 100px
+      display: block
+    .part-2
+      margin-left: 0
+  .statistics .visitors
+    padding-left: 0
+    margin-bottom: 25px
+    .icon-visitors
+      position: relative
+      display: block
+      margin-bottom: 30px    
+
+.content-inner-info
+  .content-header
+    width: 100%
+    float: none
+    padding: 0
+
+//////////////////////////////////////
+.page-404
+  position: relative
+  min-height: 780px
+  background: #f7f8f9 url("../i/images/404.jpg") no-repeat
+  background-position: top right
+  //background-size: 50% 100%
+  font-size: 19px
+  color: #465161
+  h4
+    text-transform: uppercase
+    font-family: "proba_probold"
+    color: #465161
+    font-size: 21px
+  a
+    display: inline-block
+    font-family: "proba_probold"
+    color: #e50069
+    text-transform: uppercase
+    text-decoration: underline
+    letter-spacing: 2px
+    font-size: 14px
+    &:hover
+      text-decoration: none
+  .text-404
+    max-width: 400px    
+
+
+.title-404
+  @include rem2px(font-size,9.6)
+  font-family: "proba_prolight"
+  color: #000
+
+@media (max-width: $screen-sm-max)
+  .page-404
+    background: #f7f8f9 url("../i/images/404.jpg") no-repeat
+    background-position: top right
+    background-size: 100% 100%
+    min-height: 600px
+
+
+@media (max-width: $screen-xs-max)
+  .title-404
+    font-size: 46px
+  .page-404  
+    background: #f7f8f9
+    min-height: 400px

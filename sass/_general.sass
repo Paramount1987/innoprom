@@ -1,0 +1,1167 @@
+h3
+  color: #0c0705
+  font-family: 'proba_proregular'
+  letter-spacing: 1px
+  text-transform: uppercase
+  @include font-size(3.4)
+
+
+.red-text
+  font-style: normal
+  color: #ea3486
+
+.content-body .red-high-text 
+  color: #ea3486
+  font: 15px/22px "proba_probold"
+  text-transform: uppercase 
+  letter-spacing: 0.5px
+  margin-top: 35px 
+/////////////////////////////////////////////////////////////
+
+
+.service
+  background: #30a8e0 url("../i/images/bg-blue-new.jpg") no-repeat center
+  position: relative
+  margin-top: -1px
+
+.service .link
+  color: #fff
+  display: block
+  text-transform: uppercase
+  font-family: 'proba_probold'
+  letter-spacing: 1px
+  position: relative
+  @include font-size(1.5)
+  img
+    width: 35%
+  span
+    display: inline-block 
+    vertical-align: middle
+    width: 60%
+    text-align: left
+
+@media (max-width: 1100px)
+  .service .link img
+    width: 100px !important
+  .service .link span
+    width: 48%  
+
+@media (max-width: 1100px)
+  .list-service-application li .link img
+    width: 100% !important
+
+.service a:before
+//  content: ""
+  position: absolute
+  padding-left: 10px
+  left: 0
+  top: 50%
+  display: inline-block
+  @include translate(0,-50%)
+  @include width(8)
+  @include height(8)
+  border: 2px solid #61ccff
+  border-radius: 100%  
+  
+.list-service a:hover
+  text-decoration: underline
+  span
+    text-decoration: underline
+
+.list-service svg
+  position: absolute
+  top: -10px
+  left: -35px
+  width: 140px
+  height: 132px
+
+
+
+.list-service
+  width: 100%
+  height: 110px
+  margin: 0
+  padding: 0
+  display: table
+  table-layout: fixed
+  li
+    display: table-cell
+    width: 100%
+    vertical-align: middle
+    position: relative
+    text-align: center
+  &:after
+    content: ""
+    display: inline-block
+    width: 100%  
+
+
+.list-service li.doc
+  .link
+    background: url("../i/svg/icon_doc.svg") no-repeat 5% center
+
+.list-service li.user
+  .link
+    background: url("../i/svg/icon_user.svg") no-repeat 5% center
+
+.list-service li.lamp
+  .link
+    background: url("../i/svg/icon_lamp.svg") no-repeat 5% center
+
+
+/*@media (max-width: $screen-sm-max)
+  .list-service li.ticket
+    background: url("../i/svg/icon_doc-2.svg") no-repeat -20px center
+  .list-service li.square
+    background: url("../i/svg/icon_suare.svg") no-repeat -20px center
+  .list-service li.vip
+    background: url("../i/svg/icon_k.svg") no-repeat -20px center
+  .list-service li.doc
+    background: url("../i/svg/icon_doc.svg") no-repeat -20px center
+  .list-service li.user
+    background: url("../i/svg/icon_user.svg") no-repeat -20px center
+  .list-service li.lamp
+    background: url("../i/svg/icon_lamp.svg") no-repeat -20px center*/
+
+.list-service-more
+  li
+    width: 100%
+    padding-right: 2%
+  .link
+    padding-left: 70px  
+  svg
+    width: 115px  
+
+@media (min-width: $screen-md-min)
+  .list-service-more
+    li
+      padding-right: 2%
+
+@media (max-width: $screen-sm-max)
+  .service
+    a:before
+      width: 60px
+      height: 60px
+  .list-service
+    height: 80px
+    li
+      padding-right: 20px
+
+
+@media (max-width: $screen-sm-max)
+  .service-more
+    background: #30a8e0 url("../i/images/bg-blue-line.png") no-repeat center
+    a:before
+      left: 10px
+      width: 60px
+      height: 60px
+  .list-service-more
+    height: auto
+    display: block
+    padding-top: 8px
+    li
+      display: table
+      width: 100%
+      height: 80px
+      margin-top: 8px
+      .link
+        display: table-cell
+        vertical-align: middle
+        font-size: 14px
+
+
+@media (max-width: $screen-xs-max)
+  .service
+    background: #30a8e0 url("../i/images/bg-blue-line.png") no-repeat center
+    a:before
+      left: 10px
+      width: 60px
+      height: 60px
+  .list-service
+    height: auto
+    display: block
+    padding-top: 8px
+    li
+      display: table
+      width: 100%
+      height: 80px
+      margin-top: 8px
+      text-align: left
+      .link
+        display: table-cell
+        vertical-align: middle
+        font-size: 14px
+  .list-service-more
+    padding-left: 20px
+    li .link
+      padding-left: 70px    
+
+
+
+/////////////////////////////////industry
+.industry
+  background: #f2f2f0 url("../i/images/industry-bg.jpg")
+  @include rem2px(padding-bottom,5)
+  h3
+    font: 40px/50px 'proba_promedium'
+    text-transform: uppercase
+    letter-spacing: 2px
+    @include rem2px(margin-top,8)
+    @include rem2px(margin-bottom,2)
+    @include font-size(4)
+  p 
+    color: #1d1b19
+    font: 26px/30px 'proba_prolight'
+    @include rem2px(margin-top,2)
+    @include font-size(2.6)
+
+.industry-list:after
+  content: ""
+  display: inline-block
+  width: 100%
+
+.industry-list
+  text-align: justify
+  @include rem2px(padding-left,4)
+  @include rem2px(padding-right,4)
+  li
+    display: inline-block
+    vertical-align: top
+    text-align: center 
+    a
+      font: normal 14px/20px  'proba_probold'
+      @include font-size(1.4)
+      text-transform: uppercase
+      color: #0c0705
+      &:hover
+        text-decoration: underline
+
+.industry-list li .icon
+  position: relative
+  img
+    position: absolute
+    width: 150%
+    left: 50%
+    top: 50%
+    @include translate(-46%,-35%)
+
+@media (min-width: $screen-md-min)
+  .industry-list .icon .svg-icon
+    position: relative
+    top: -2px
+    left: -19px
+
+@media (min-width: $screen-lg-min)
+  .industry-list .icon .svg-icon
+    position: relative
+    top: 7px
+    left: -10px
+
+
+
+
+@media (max-width: $screen-sm-max)  
+  .industry-list .icon .svg-icon
+    position: relative
+    top: -5px
+    left: -23px
+
+
+@media (max-width: $screen-xs-max)  
+  .industry-list .icon .svg-icon
+    position: relative
+    top: -21px
+    left: -21px
+    width: 110px
+    height: 110px
+
+@media (max-width: $screen-xs-max)
+  .industry
+    padding-bottom: 5px
+    h3
+      font-size: 20px
+      line-height: 28px
+      margin-top: 15px
+      margin-bottom: 15px
+      letter-spacing: 0
+    p
+      font-size: 18px
+      line-height: 20px  
+    .container-fluid
+      padding-left: 30px  
+  .industry-list
+    li
+      display: block
+      margin-bottom: 30px
+      text-align: left    
+
+
+@media (max-width: $screen-sm-max)
+  .industry-list
+    padding-left: 0
+    padding-right: 0
+  .news-block 
+    h3
+      padding: 0 2.3%  
+/////////////////////news-block
+@media (min-width: $screen-sm-min)
+  .news-wrap .news-item
+    &:before,
+    &:after
+      padding: 0 7%
+
+@media (min-width: $screen-md-min)
+  .news-wrap .news-item
+    padding: 0 2.3%
+    &:before,
+    &:after
+      padding: 0 8%
+  .news-block 
+    h3
+      padding: 0 2.3%
+    .row
+      margin: 0 -2.3%
+
+@media (min-width: $screen-lg-min)
+  .news-wrap .news-item
+    padding: 0 2.3%
+    &:before,
+    &:after
+      padding: 0 11%
+  .news-block 
+    h3
+      padding: 0 2.3%
+    .row
+      margin: 0 -2.3%
+
+.news-block
+  @include rem2px(padding-bottom,6)
+
+.news-wrap
+  .img-wrap
+    overflow: hidden
+    position: relative
+    img
+      max-width: 100%
+
+
+.news-item a
+  font: 16.5px/22px 'geometriamedium'
+  margin-top: 35px
+  color: #353535
+  display: inline-block
+  &:hover
+    text-decoration: underline
+
+
+.news-item .news-date
+  font: 11px/15px  'proba_probold'
+  text-transform: uppercase
+  letter-spacing: 1px
+  color: #2fa9db
+
+
+.news-item
+  position: relative
+  padding-top: 25px !important
+  &:before,
+  &:after
+    content: ""
+    display: block
+    position: absolute
+    z-index: 1
+    top: 0
+    left: 0
+    width: 100%
+    height: 4px
+    background: #30a9db
+    background-clip: content-box
+  &:after
+    z-index: 2
+    width: 45%
+    background: #e50069  
+    background-clip: content-box
+
+
+@media (max-width: $screen-xs-max)
+  .news-block
+    padding-top: 20px
+    padding-bottom: 0
+    .news-wrap
+      padding-left: 30px
+      padding-right: 30px
+      padding-bottom: 10px
+    .news-item
+      padding-left: 0
+      padding-right: 0
+    h3
+      padding-left: 30px  
+  .news-wrap .img-wrap
+    display: none    
+  .news-item a
+    margin-top: 0  
+    font-family: "proba_promedium"
+    font-size: 15px
+  h3
+    font-size: 21px  
+
+    
+
+
+/////////////////////////////////////
+.premier
+  text-align: center
+  background: #e50069 url("../i/images/more-bg.jpg") no-repeat center
+  @include rem2px(height,20)
+  .premier-img
+    float: left
+    display: inline-block
+    img
+      width: 183px
+  h3
+    display: inline-block
+    text-align: left
+    color: #fff
+    text-transform: uppercase
+    letter-spacing: 1px
+    margin: 0
+    font: 26px/35px 'proba_prosemibold'
+    @include font-size(2.7)
+  .more-link
+    display: inline-block
+    float: right
+    border: 3px solid #2fa7df
+    text-align: center
+    width: 20%
+    text-transform: uppercase
+    color: #fff
+    letter-spacing: 1px
+    font: 16px/20px 'proba_promedium'
+    @include font-size(1.6)
+    @include rem2px(line-height,6.5)
+    &:hover
+      background: #2fa7df
+
+
+.premier .container-fluid
+  height: 100%
+
+.premier .container-fluid .wrap 
+  display: table
+  width: 100%
+  height: 100%
+
+.premier .container-fluid .inner
+  display: table-cell
+  height: 100%
+  vertical-align: middle
+
+.premier
+  h3,
+  .more-link
+    position: relative
+    top: 12px
+
+
+@media (max-width: $screen-sm-max)
+  .premier
+    height: auto
+    padding: 40px 0 50px 0
+    background: #e50069 url("../i/images/more-bg-mobile.jpg") no-repeat center
+    .more-link
+      margin-top: 30px
+      left: -65px
+      width: 30%
+      float: none
+
+
+
+@media (max-width: $screen-xs-max)
+  .premier
+    text-align: center
+    background: #e50069 url("../i/images/more-bg-mobile.jpg") no-repeat center
+    height: auto
+    .premier-img,
+    .more-link,
+    h3
+      float: none
+      text-align: center
+      font-size: 18px
+      line-height: 25px
+      margin: 15px 0
+      display: block
+    .more-link
+      width: 80%
+      margin: 0 auto
+      font-size: 13px
+      line-height: 45px
+      left: auto
+    .container-fluid
+      padding-left: 30px
+      padding-right: 30px    
+    .inner
+      padding: 40px 0  
+    .premier-img
+      img
+        width: 110px  
+
+///////////////////////////////////////////////////////
+.subscribe
+  position: relative
+  padding-top: 25px !important
+  &:before,
+  &:after
+    content: ""
+    display: block
+    position: absolute
+    z-index: 1
+    top: 0
+    left: 0
+    width: 100%
+    height: 4px
+    background: #30a9db
+    padding: 0 15px
+    background-clip: content-box
+  &:after
+    z-index: 1
+    width: 45%
+    background: #e50069  
+    background-clip: content-box
+
+
+.form-subscribe
+  margin-bottom: 25px
+
+.subscribe
+  .inner
+    background: #f2f2f0 url("../i/images/industry-bg.jpg")
+    padding: 30px 8%
+    min-height: 330px
+  h4
+    font: 21px/28px 'proba_probold'
+    letter-spacing: 1px
+    text-transform: uppercase
+    margin: 20px 0 28px 0
+  p
+    color: #656668
+    font: 14px/20px 'proba_prolight'
+  .question
+    color: #393a3f
+    font: 16px/20px 'proba_prolight'
+ 
+
+.form-subscribe
+  .form-control
+    width: 100%
+    display: block
+    background-color: #fff
+    border: 0
+    outline: 0
+    font: 14px/35px 'proba_prolight'
+    padding: 0 45px 0 15px
+    height: 35px
+    @include box-shadow(inset 1px 1px 1px rgba(0,0,0,.29))
+  .wrap-input
+    margin-bottom: 18px  
+    .form-control
+      margin-top: 8px
+    label
+      color: #7c7d82  
+
+.form-feedback
+  margin-top: 30px
+  margin-bottom: 0
+  .submit-btn
+    background-color: #e50069
+    color: #fff
+    text-transform: uppercase
+    font: 11px/30px "proba_probold"
+    letter-spacing: 0.5px
+    width: 110px
+    text-align: center
+    border: 0
+    outline: 0
+    @include transition(all linear .2s)
+    &:hover
+      background: darken(#e50069, 15%)
+  textarea.form-control
+    height: 110px
+
+    
+
+
+.wrap-control
+  position: relative
+  .submit-btn
+    position: absolute
+    display: block
+    right: 0
+    top: 0
+    width: 35px
+    height: 35px
+    background: #e50069
+    border: 0
+    outline: 0
+    @include transition(all linear .2s)
+    &:after 
+      content: ""
+      display: block
+      position: absolute
+      width: 0
+      height: 0
+      top: 50%
+      left: 50%
+      @include translate(-50%,-50%)
+      border-style: solid
+      border-width: 8.5px 0 8.5px 13px
+      border-color: transparent transparent transparent #ffffff
+    &:hover
+      background: darken(#e50069,15%)  
+
+
+@media (max-width: $screen-xs-max)
+  .subscribe
+    padding: 0 !important
+    &:before,
+    &:after
+      display: none
+    .question
+      display: none
+    h4
+      font-size: 19px
+      margin: 10px 0 17px 0     
+
+////////////////////////////////////////////////////
+.service-member
+  @include rem2px(padding-top, 4.5)
+  @include rem2px(padding-bottom, 5)
+  background: #f2f2f0 url("../i/images/industry-bg.jpg")
+
+
+.service-member .industry-list a
+  display: inline-block
+  font: normal 14px/20px "proba_probold"
+  @include font-size(1.4)
+  text-transform: uppercase
+  vertical-align: top
+  text-align: center
+  color: #0c0705
+
+.industry .industry-list a .icon,
+.service-member .industry-list a .icon
+  display: block
+  @include rem2px(width,11.3)  
+  @include rem2px(height,11.3)  
+  @include box-shadow (inset 0 1px 5px rgba(0,0,0,.3))
+  margin: 30px auto
+  border-radius: 100%
+  background: #a5a5a5
+  //@include transition(all linear .2s)
+
+.service-member .industry-list a:hover .icon
+  background: #e50069
+
+.industry .industry-list a .icon
+  width: 118px
+  height: 118px
+  background: transparent
+  @include box-shadow (none)
+  overflow: hidden
+  position: relative
+  z-index: 1
+
+.industry .industry-list a:hover .icon
+  @include box-shadow (inset 0 1px 5px rgba(0,0,0,.3))
+
+.industry .industry-list a:hover 
+  .icon-pink
+    background: #e50069  
+  .icon-green
+    background: #59b968  
+  .icon-blue
+    background: #30a8e0
+  .icon-green-l
+    background: #02bbb0
+  .icon-yellow
+    background: #efcd54  
+  svg
+    @include opacity(0) 
+  svg.icon-tr     
+    @include opacity(1)  
+
+.industry svg
+  width: 825px
+  height: 170px
+  position: relative
+  top: -23px
+  @include transition(opacity linear .2s)
+
+.industry svg.icon-tr
+  position: absolute
+  top: -25px
+  left: -29px
+  width: 170px
+  height: 160px
+  z-index: 20
+  @include opacity(0) 
+
+.industry svg.icon-tr-m
+  width: 200px
+  height: 200px
+  top: -40px
+  left: -38px
+
+@media (max-width: $screen-sm-max)
+  .industry svg.icon-tr
+    left: -22px
+    top: -20px
+    width: 140px
+    height: 140px
+
+@media (max-width: $screen-xs-max)
+  .industry svg.icon-tr
+    left: -24px
+    top: -22px
+    width: 110px
+    height: 110px
+
+
+#icon-1
+  left: -23px
+
+#icon-2
+  left: -185px
+
+#icon-3
+  left: -357px
+
+#icon-4
+  left: -520px
+
+#icon-5
+  left: -681px
+
+@media (max-width: $screen-sm-max)
+  .industry svg
+    width: 680px
+    height: 210px
+    top: -53px
+  #icon-1
+    left: -19px  
+  #icon-2
+    left: -151px 
+  #icon-3
+    left: -294px 
+  #icon-4
+    left: -427px  
+  #icon-5
+    left: -562px 
+
+@media (max-width: $screen-xs-max)
+  .industry svg
+    width: 477px
+    height: 91px
+    top: -11px
+  #icon-1
+    left: -24px  
+  #icon-2
+    left: -112px 
+  #icon-3
+    left: -207px 
+  #icon-4
+    left: -297px  
+  #icon-5
+    left: -386px  
+/////////////////////////////////////////////////////////
+@media (max-width: $screen-sm-max)
+  .industry .industry-list a .icon
+    width: 100px
+    height: 100px
+
+@media (max-width: $screen-xs-max)
+  .service-member
+    padding-top: 25px
+    padding-bottom: 5px
+    .container-fluid
+      padding: 0 30px
+    .industry-list li
+      margin-bottom: 25px
+    .industry-list a 
+      text-align: left
+      display: table
+      span
+        display: table-cell
+        vertical-align: middle
+      .icon
+        width: 66px
+        height: 66px  
+        display: inline-block
+        margin: 0
+        float: left
+        margin-right: 25px
+  .industry
+    padding-top: 25px
+    padding-bottom: 5px
+    .container-fluid
+      padding: 0 30px
+    .industry-list li
+      margin-bottom: 25px
+    .industry-list a 
+      text-align: left
+      display: table
+      span
+        display: table-cell
+        vertical-align: middle
+      .icon
+        width: 66px
+        height: 66px  
+        display: inline-block
+        margin: 0
+        float: left
+        margin-right: 25px      
+///////////////////////////////////
+.projects
+  @include rem2px(padding-top,5)
+  @include rem2px(padding-bottom,3)
+  .img-responsive
+    width: 100%
+
+.project-left
+  background: #465162
+  float: left
+  .logo-gid
+    @include rem2px(width,13)
+    @include rem2px(height,13)
+    position: absolute
+    top: 20%
+    left: 15%
+      
+.text-white
+  color: #fff
+
+.project-right
+  background: #f2f2f2 
+  float: right
+
+.text-black
+  color: #2d2d2d 
+ 
+.project-right:after
+  content: ""
+  display: block
+  background: rgba(0,0,0,0)
+  z-index: 2
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  @include transition(background linear .2s)
+
+.project-right:hover:after
+  background: rgba(0,0,0,0.1)
+
+.project-left:after
+  content: ""
+  display: block
+  background: rgba(0,0,0,0)
+  z-index: 2
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  @include transition(background linear .2s)
+
+.project-left:hover:after
+  background: rgba(0,0,0,0.2)
+
+
+.project-right,
+.project-left
+  position: relative
+  //@include rem2px(height, 39)
+  min-height: 275px
+  display: inline-block
+  overflow: hidden
+  .text
+    position: absolute
+    padding-right: 40px
+    bottom: 10%
+    left: 8%
+    z-index: 5
+    font-family: 'proba_promedium'
+    @include rem2px(font-size, 2.9)
+    @include rem2px(line-height, 3)
+
+@media (min-width: $screen-sm-min)
+  .project-right,
+  .project-left
+    width: 49%
+
+@media (min-width: $screen-lg-min)
+  .project-right,
+  .project-left
+    width: 44%
+
+
+@media (max-width: $screen-sm-max)
+  .project-right,
+  .project-left
+    min-height: 210px
+  .project-left .logo-gid
+    width: 80px  
+    height: 80px
+  .projects 
+    .text
+      font-size: 18px 
+  .project-left .logo-gid     
+    top: 15%
+
+@media (max-width: $screen-xs-max)
+  .projects
+    padding-top: 20px
+    font-size: 0
+    .container-fluid
+      padding: 0
+      h3
+        padding: 0 30px  
+      .text
+        font-size: 20px   
+    .project-right,
+    .project-left 
+      min-height: 275px  
+      float: none 
+      width: 100%
+
+@media (max-width: 480px)
+  .project-right .img-responsive
+    width: 480px
+    max-width: 480px
+    position: absolute
+    top: 0
+    right: 0
+///////////////////////////
+.content
+  .tab-content
+    @include rem2px(padding-top,2)
+    @include rem2px(padding-bottom,4)
+  .tab-switch 
+    @include rem2px(margin-left, -6)
+    @include rem2px(margin-top,1)
+    margin-bottom: 0
+    li:before
+      display: none
+
+.content-body .tab-switch li
+  padding-left: 0
+
+.content .tab-switch li
+  display: inline-block
+  @include rem2px(margin-left, 6)
+  span
+    font-family: "proba_promedium"
+    @include font-size(1.9)
+    letter-spacing: 1px
+    color: #6d6d6d
+    text-transform: uppercase
+    border-bottom: 1px dashed #6d6d6d
+    cursor: pointer
+    &:hover
+      color: #e50069
+      border-color: #e50069
+  span.active
+    @include font-size(3)
+    color: #0c0705
+    border-bottom: 0 
+    cursor: default 
+
+@media (max-width: $screen-xs-max)
+  .content .tab-switch li
+    display: block
+    text-align: center
+    margin-bottom: 20px
+
+.sponsors
+  .tab-content
+    @include rem2px(padding-top,2)
+    @include rem2px(padding-bottom,4)
+  .tab-switch 
+    @include rem2px(margin-left, -6)
+    @include rem2px(margin-top,8)
+    margin-bottom: 0
+
+
+.sponsors .tab-switch li
+  display: inline-block
+  @include rem2px(margin-left, 6)
+  span
+    font-family: "proba_promedium"
+    @include font-size(1.9)
+    letter-spacing: 1px
+    color: #6d6d6d
+    text-transform: uppercase
+    border-bottom: 1px dashed #6d6d6d
+    cursor: pointer
+    &:hover
+      color: #e50069
+      border-color: #e50069
+  span.active
+    @include font-size(3)
+    color: #0c0705
+    border-bottom: 0 
+    cursor: default 
+
+
+.tab-content .tab-item
+  display: none
+
+.tab-content .tab-item.active
+  display: block
+  -webkit-animation-name: fadeIn
+  -webkit-animation-duration: 0.5s
+  animation-name: fadeIn
+  animation-duration: 0.5s
+
+@-webkit-keyframes fadeIn 
+  0%
+    opacity: 0
+  20% 
+    opacity: 0
+  40% 
+    opacity: 0.3
+  60% 
+    opacity: 0.5
+  80% 
+    opacity: 0.9
+  100%
+    opacity: 1
+
+@keyframes fadeIn
+  0%
+    opacity: 0
+  20%
+    opacity: 0
+  40% 
+    opacity: 0.3
+  60%
+    opacity: 0.5
+  80%
+    opacity: 0.9
+  100%
+    opacity: 1
+
+.sponsor-list
+  margin-left: 0
+  //display: inline
+  li
+    display: inline-block
+    margin-right: 0
+    text-align: center
+    @include rem2px(margin-bottom, 3)
+    a
+      display: inline-block
+      text-align: center
+      img
+        max-width: 100%
+
+@media (max-width: $screen-xs-max)
+  .sponsors .tab-switch li 
+    margin-bottom: 0
+    //display: block
+    span
+      color: #0c0705
+    span.active  
+      color: #fff
+      @include font-size(1.9)
+  .sponsors .tab-switch
+    margin: 0 -30px 0 -30px
+    font-size: 0
+    li
+      width: 50%
+      text-align: center
+      padding: 20px 0
+      margin-left: 0
+      display: inline-block
+      border: 1px solid #ccc
+    li.last
+      display: block  
+      width: 100% 
+      border-top: 0
+    li.active
+      background: #e50069
+      border-color: #e50069
+    li.first
+      border-right: 0  
+
+      
+/////////////////////////////////////////////////////////////////
+.organization
+  margin-left: -5%
+  h4,
+  h5
+    @include font-size(2.5)
+    text-transform: uppercase
+    letter-spacing: 1px
+    line-height: 25px
+    margin-top: 0
+  h5
+    @include font-size(1.7)  
+  li
+    display: inline-block
+    vertical-align: top  
+    margin-bottom: 25px
+    margin-left: 5%
+    a
+      display: inline-block
+      img
+        max-width: 100%
+
+
+@media (min-width: $screen-md-min)
+  .sponsor-list li a
+    width: 125px 
+  .organization li a
+    width: 125px 
+
+@media (min-width: $screen-lg-min)
+  .organization li a
+    width: 150px     
+
+@media (max-width: $screen-sm-max)
+  .sponsor-list li a
+    width: 100px 
+  .organization li a
+    width: 120px 
+  .organization li.first
+    display: block  
+    margin-bottom: 50px
+    a
+      margin-right: 8%
+
+@media (max-width: $screen-xs-max)
+  .sponsors .container-fluid
+    padding: 0 30px
+  .sponsor-list li a
+    width: 90px 
+    margin-right: 0
+  .organization li a
+    width: 120px 
+  .organization li.first
+    display: block  
+    margin-bottom: 50px
+    a
+      margin-right: 8%  
+      width: 90px
+ 
+///////////////////////////
+@media (max-width: 1750px)
+  .container-fluid,
+  .wrap-timeback,
+  .slider-inner,
+  .speakers > h3
+    max-width: 1350px
+
+
+////////////////////////////////////////////////
+

@@ -1,0 +1,81 @@
+//
+// Breadcrumbs
+// --------------------------------------------------
+
+
+.breadcrumb {
+  list-style: none;
+  margin-top: 25px;
+  white-space: nowrap;
+  overflow: hidden;
+  @include gradient-horizontal(rgba(255,255,255,0), rgba(255,255,255,1), 30%,100%);
+
+  > li {
+    display: inline-block;
+    position: relative;
+
+    + li:before {
+      content: "\2014"; // Unicode space added since inline-block means non-collapsing white-space
+      padding: 0 3px;
+      color: #30a9db;
+    }
+  }
+
+  
+  .item {
+    color: #737373;
+    font: italic 11px/11px "Ubuntu";
+    font-weight: 300;
+    position: relative;
+    z-index: 1;
+
+  }
+  .last {
+    z-index: -1;
+  }
+  a:hover{
+    text-decoration: underline;
+  }
+}
+
+@media (max-width: $screen-xs-max){
+
+  .breadcrumb{
+    margin-left: -15px;
+    margin-right: -15px;
+    background: #f8f8f8;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    margin-top: 12px;
+    li{
+      display: none;
+      z-index: 1;
+    }
+    li.active{
+      display: block;
+      position: relative;
+      padding-right: 30px;
+      padding-left: 30px;
+
+    }
+  }
+  .breadcrumb li.active:before{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    color: transparent;
+    left: 0;
+    top: 50%;
+    margin-top: -8px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 8px 10px 8px 0;
+    border-color: transparent #5a6071 transparent transparent;
+    cursor: pointer;
+  }
+  .breadcrumb > li + li:before{
+    content: "";
+  }
+}

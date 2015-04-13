@@ -1,0 +1,193 @@
+//
+// Modals
+// --------------------------------------------------
+
+// .modal-open      - body class for killing the scroll
+// .modal           - container to scroll within
+// .modal-dialog    - positioning shell for the actual modal
+// .modal-content   - actual modal w/ bg and corners and shit
+
+// Kill the scroll on the body
+.modal-open {
+  overflow: hidden;
+  #footer{
+    padding-right: 17px;
+  }
+}
+
+// Container that the modal scrolls within
+.modal {
+  display: none;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  -webkit-overflow-scrolling: touch;
+
+  // Prevent Chrome on Windows from adding a focus outline. For details, see
+  // https://github.com/twbs/bootstrap/pull/10951.
+  outline: 0;
+
+  // When fading in the modal, animate it to slide down
+  &.fade .modal-dialog {
+    //@include translate3d(0, -25%, 0);
+    @include transition-transform(0.4s ease-out);
+    top: 40%;
+    left: 50%;
+    @include translate(-50%,-100%);
+  }
+  &.in .modal-dialog { /*@include translate3d(0, 0, 0);*/position: absolute; @include translate(-50%,-50%);}
+}
+.modal-open .modal {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+// Shell div to position the modal with bottom padding
+.modal-dialog {
+  position: relative;
+  left: 8px;
+  width: 500px;
+  max-width: 100%;
+  margin: 0 auto 0 auto;
+  background: #fff;
+  z-index: 1010;
+}
+
+// Actual modal
+.modal-content {
+  position: relative;
+  background-clip: padding-box;
+  // Remove focus outline from opened modal
+  outline: 0;
+  .btn-b{
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+}
+.modal-email .modal-content{
+  background: url("../i/email.png") no-repeat;
+  background-position: -100px -50px;
+}
+
+
+.modal-email .modal-content {
+  padding-left: 55px;
+}
+
+@media (max-width: $screen-xs-max){
+  .modal-email .modal-content {
+    padding-left: 0;
+    .form-subscribe{
+      padding-top: 0;
+    }
+    .modal-title{
+      font-size: 22px;
+    }
+  }
+}
+
+// Modal background
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 800;
+  background-color: #000;
+  // Fade for backdrop
+  &.fade { @include opacity(0); }
+  &.in { @include opacity(.5); }
+}
+
+// Modal header
+// Top section of the modal w/ title and dismiss
+.modal-header {
+  padding: 35px 35px 20px 35px;
+  h4{
+    text-transform: none;
+  }
+  a{
+    text-decoration: underline;
+    &:hover{
+      text-decoration: none;
+    }
+  }
+
+}
+// Close icon
+.modal-header .close {
+  margin-top: -35px;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  font-size: 50px;
+  line-height: 40px;
+  float: right;
+  border-top: 3px solid #e8257d;
+  padding: 0;
+  font-weight: normal;
+}
+
+// Title text within header
+.modal-title {
+  margin: 0;
+  color: #2fa7df;
+  @include font-size(3.2);
+  font-family: 'proba_prolight';
+  font-weight: normal;
+
+}
+
+// Modal body
+// Where all modal content resides (sibling of .modal-header and .modal-footer)
+.modal-body {
+  position: relative;
+  padding: 0 35px 35px 35px;
+  form{
+    padding-top: 35px;
+    label{
+      display: block;
+      margin-bottom: 5px;
+    }
+    .form-control{
+      width: 100%;
+      border: 1px solid #ccc
+    }
+  .form-group{
+    margin-bottom: 20px;
+  }  
+}
+
+}
+
+// Footer (for actions)
+.modal-footer {
+  @include clearfix(); // clear it in case folks use .pull-* classes on buttons
+  background: #f4f4f4;
+  padding: 20px 35px;
+  h5{
+    display: inline-block;
+    margin: 0;
+  }
+  .social-list{
+    float: right;
+    display: inline-block;
+  }
+}
+
+// Measure scrollbar width for padding body during modal show/hide
+.modal-scrollbar-measure {
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll;
+}
+
+

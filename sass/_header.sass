@@ -1,0 +1,224 @@
+header
+  padding-bottom: 30px
+  background: #fff
+  position: relative
+  z-index: 10
+  .col-md-4
+    padding-left: 0
+
+@media (max-width: $screen-xs-max)
+  header
+    padding-bottom: 0
+    .col-md-4
+      padding-right: 0
+
+.logo-header,
+.data-info
+  display: inline-block
+  vertical-align: bottom
+  padding-top: 30px
+
+
+
+.data-info
+  margin-left: 50px
+  span
+    font: normal 19px/20px 'proba_promedium'
+    color: #8b8787 
+    letter-spacing: 0.5px
+
+.title-company
+  font: normal 20px/16px 'proba_probold'
+  text-transform: uppercase
+  margin: 20px 0 0 0
+  letter-spacing: 1px
+
+.user-enter
+  text-align: right
+  width: 100%
+
+.user-enter-link
+  background: #aeb9bc 
+  color: #fff
+  border-bottom-left-radius: 10px
+  border-bottom-right-radius: 10px
+  padding: 7px 0 10px 0
+  text-align: center
+  width: 65%
+  max-width: 260px
+  min-width: 209px
+  display: inline-block
+  letter-spacing: 1px
+  @include transition(all linear .2s)
+  @include font-size(1.5)
+  &:hover,
+  &:focus
+    color: #fff
+    background: #465162
+  
+
+.select-lang
+  display: inline-block
+  vertical-align: bottom
+  padding-right: 20px
+  span
+    text-transform: uppercase
+    font-family: "proba_prosemibold"
+    font-size: 13px
+    cursor: pointer
+    display: inline-block
+    position: relative
+    top: -5px
+    &:hover
+      color: #30a9db
+
+
+.wrap-info-top
+  width: 100%    
+
+.phone-top
+  text-align: right  
+  font-size: 14px
+  margin: 20px 0 10px 0
+  vertical-align: top
+  line-height: 25px
+  a
+    text-decoration: none
+    font: normal 22px/25px 'proba_prosemibold'
+    color: #0c0705
+    padding-left: 15px
+////////////////////////////////////////////////////////////
+.icon:before
+  background: $icon-bg
+  color: $icon-color
+  @include transition(all linear .2s)
+
+.icon:hover:before
+  background: $icon-hover-bg
+  text-decoration: none
+
+
+.icon
+  background: transparent
+  border: 0
+  outline: 0
+  padding: 0
+
+.icon-youtube-play:before
+  margin-right: 0
+
+.icon-search
+  position: relative
+  z-index: 2
+
+.icon-search:before,
+.icon-search:hover:before
+  color: #818386
+  background: transparent
+  z-index: 2
+  position: relative
+  font-size: 18px
+  margin-right: 12px
+  top: 2px
+
+.icon-facebook
+  margin-left: 7px
+
+.social-net
+  text-align: right  
+  background: #fff
+
+
+.form-search
+  display: inline-block
+  position: relative
+  .fied-search
+    position: absolute
+    border: 1px solid #ccc
+    outline: 0
+    font-size: 14px
+    top: 0
+    right: 8px
+    display: block
+    width: 260px
+    height: 35px
+    padding-left: 10px
+    padding-right: 30px
+    background-color: #fff
+    color: #353535
+    font-family: "proba_prolight"
+    @include box-shadow(inset 0 1px 1px rgba(0,0,0,.29))
+
+    
+
+
+/////////////////////////////////////////////
+.mobile-registr
+  display: block
+  background: #e50069
+  text-transform: uppercase
+  text-align: center
+  line-height: 40px
+  font-family: "proba_prosemibold"
+  font-size: 13px
+  color: #fff
+  letter-spacing: 1px
+  @include transition(all linear .2s)
+  &:hover,
+  &:focus
+    color: #fff
+    background: darken(#e50069,15%)
+
+@media (max-width: $screen-sm-max)
+  .user-enter-link
+    width: 215px
+    margin-left: 170px
+  .mobile-registr
+    position: absolute
+    z-index: 10
+    right: 235px  
+    width: 150px
+    border-bottom-left-radius: 10px
+    border-bottom-right-radius: 10px
+    line-height: 35px
+
+
+@media (max-width: $screen-xs-max)
+  .user-enter-link
+    width: 100%
+    max-width: 100%
+    margin-left: 0
+    min-width: 0
+    border-radius: 0
+    font-size: 13px
+    padding: 0
+    line-height: 40px
+    position: relative
+    top: -69px
+  .logo-header
+    padding: 12px 0
+  .mobile-twist
+    position: relative
+    top: 40px
+    height: 69px
+  .mobile-registr
+    position: relative
+    top: -69px   
+    right: auto 
+    width: 50%
+    border-radius: 0
+    line-height: 40px
+   
+.nav-link
+  display: block
+  width: 28px
+  height: 17px
+  background: url("../i/menu.png") no-repeat center
+  float: right
+  position: relative
+  top: 25px
+  z-index: 5
+
+
+
+

@@ -1,0 +1,47 @@
+/* Sticky footer styles----------------- */
+html 
+  position: relative
+  min-height: 100%
+
+body 
+  /* Margin bottom by footer height */
+  margin-bottom: 160px
+
+.middle
+  overflow-x: hidden
+  clear: both
+
+@media (max-width: $screen-xs-max)
+  .wrapper
+    max-width: 768px
+    margin-right: auto
+    margin-left: auto
+
+#footer
+  position: absolute
+  background: #f2f2f0 url("../i/images/industry-bg.jpg")
+  bottom: 0
+  padding-top: 50px
+  width: 100%
+  /* Set the fixed height of the footer here */
+  height: 160px
+  font-family: "Trebuchet MS", Tahoma, sans-serif
+  color: #515b64
+  font-size: 13px
+  p
+    margin: 0 0 4px 0
+  a
+    color: #30a9db
+    &:hover
+      text-decoration: underline
+
+.footer-dev
+  text-align: right
+  margin: 0      
+  position: relative
+  top: -30px
+
+@media (max-width: $screen-xs-max)
+  .footer-dev
+    text-align: left
+    top: 10px

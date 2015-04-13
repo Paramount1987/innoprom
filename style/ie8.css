@@ -1,0 +1,11 @@
+.list-type-news {
+	display: block;
+	margin-left: -5%;
+}
+
+.list-type-news li{
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 4%;
+
+}

@@ -1,0 +1,229 @@
+.gallery-wrap
+  font-size: 0
+  padding-bottom: 50px
+  margin-bottom: 40px
+  margin-top: 40px
+  border-bottom: 1px solid #f2f2f2
+  #gallery
+    display: inline-block
+    vertical-align: top
+    width: calc(100% - 550px)
+    padding-right: 1%
+    overflow: hidden
+    img
+      width: 100%
+      @include transition(opacity linear .2s)
+
+
+
+
+#thumbs
+  display: inline-block
+  vertical-align: top
+  overflow: hidden
+  width: 550px
+  .pagination
+    font-size: 14px
+
+
+.thumbs
+  overflow: hidden
+  height: 495px !important
+  margin-bottom: 15px
+
+@media (max-width: 1750px)
+  .gallery-wrap #gallery
+    width: calc(100% - 475px)
+  #thumbs
+    width: 475px
+  .thumbs
+    height: 425px !important  
+
+
+
+.thumbs li
+  width: 30%
+  display: inline-block
+  padding: 0 1% 10px 1%
+  opacity: 1 !important
+  a
+    display: block
+    img
+      width: 100%
+
+
+
+
+[title=">"],
+[title="<"]
+  font-size: 0
+  position: relative
+
+[title=">"]:before
+  content: '\e806'
+  font-family: "fontello"
+  font-style: normal
+  font-weight: normal
+  display: inline-block
+  text-decoration: inherit
+  width: 20px
+  text-align: center
+  font-size: 17px
+  position: relative
+  top: 1px
+
+[title="<"]:before
+  content: '\e807'
+  font-family: "fontello"
+  font-style: normal
+  font-weight: normal
+  display: inline-block
+  text-decoration: inherit
+  width: 20px
+  text-align: center
+  font-size: 17px
+  position: relative
+  top: 1px
+
+
+
+
+
+
+.thumbnails-wrap .thumbnails-list
+  overflow: hidden
+  margin-bottom: 5px
+  min-width: 550px
+  max-height: 530px
+  @include flexbox
+  @include flex-flow(column wrap)
+  @include justify-content(space-between)
+
+.gallery-wrap #thumbs  li 
+  display: inline-block
+  width: 33%
+  overflow: hidden
+  float: none !important
+  a
+    display: inline-block
+    width: 100%
+    max-height: 115px
+    position: relative 
+    overflow: hidden
+  a.active:before
+    content: ""
+    display: block
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: 1
+    border: 4px solid rgba(229,0,105,.6)  
+  img
+    width: 100%
+    display: block
+    position: relative
+
+@media (max-width: 1280px)
+  .gallery-wrap
+    #gallery
+      width: calc(100% - 350px)
+    #thumbs
+      width: 350px
+      li
+        width: 50%
+    .thumbs
+      height: 475px !important 
+
+@media (max-width: 1190px)
+  .gallery-wrap
+    #gallery
+      width: calc(100% - 280px)
+    #thumbs
+      width: 280px
+      li
+        width: 50%
+    .thumbs
+      height: 400px !important 
+
+
+
+
+@media (max-width: $screen-sm-max)
+  .gallery-wrap #gallery
+    width: 600px
+    display: block
+    margin: 0 auto 40px auto
+  .gallery-wrap #thumbs
+    width: 600px
+    margin: auto  
+    display: block
+  .gallery-wrap .thumbs
+    height: 120px !important
+    margin-bottom: 10px
+  .gallery-wrap #thumbs li
+    width: 33% !important  
+
+@media (max-width: $screen-xs-max)
+  .gallery-wrap
+    #gallery
+      display: none
+    .thumbs
+      height: 370px !important  
+    #thumbs
+      width: 100%  
+      li a img
+        max-width: 100%
+        width: auto
+
+.gallery-wrap .pagination
+  padding: 8px 0
+  a
+    display: inline-block
+    margin: 0 8px
+    color: #7b7c81
+    text-decoration: none
+  .current
+    padding: 6px 13px !important
+    margin: 0
+    border: 1px solid #e50369
+
+
+.gallery-wrap .share-block
+  display: block
+  float: none
+  margin-top: 40px
+
+@media (max-width: $screen-xs-max)
+  .gallery-wrap #thumbs  li 
+    width: 100% !important
+    a.active:before
+      display: none
+  .gallery-wrap .thumbs    
+    width: 175px
+    margin: auto
+  .gallery-wrap .pagination
+    text-align: center 
+
+@media(max-width: 1752px)
+  .gallery-wrap
+    .img-full 
+      width: 64%
+  .gallery-wrap .thumbnails-wrap
+    width: 36%  
+  .thumbnails-wrap .thumbnails-list  li   
+    width: 29%
+
+@media(max-width: 1280px)
+  .gallery-wrap
+    .img-full 
+      width: 70%
+
+
+@media (max-width: $screen-xs-max)
+  .gallery-wrap .img-full
+    display: none
+
+//////////////////
+
